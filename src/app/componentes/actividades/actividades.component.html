@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tabla de actividades</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+</head>
+<body>
+  <div class="container mt-3">
+    <h2>Actividades</h2>
+    <p>Presentamos actividades a su disposición:</p>            
+    <table class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Actividad</th>
+          <th>Descripción</th>
+          <th>Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let actividad of actividades">
+          <td>{{ actividad.id }}</td>
+          <td>{{ actividad.nombre }}</td>
+          <td>{{ actividad.descripcion }}</td>
+          <td>{{ actividad.fecha | date:'dd/MM/yyyy' }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="back-button-container">
+      <a class="back-button" href="javascript:history.back()">Volver</a>
+    </div>
+  </div>
+
+</body>
+</html>
+
